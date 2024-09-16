@@ -1,0 +1,6 @@
+torch==1.12.1+cu113      # for CUDA support, adjust version accordingly
+transformers==4.19.2     # Hugging Face Transformers library
+diffusers==0.3.0         # Stable Diffusion inference library
+numpy==1.21.6            # For numerical computations
+Pillow==9.2.0            # Image processing library
+scipy==1.8.0             # Useful for optimization
