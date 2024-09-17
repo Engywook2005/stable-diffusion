@@ -27,5 +27,10 @@ RUN mkdir -p models/ldm/stable-diffusion-v1
 # Download the Stable Diffusion model checkpoint
 RUN wget -O models/ldm/stable-diffusion-v1/model.ckpt https://huggingface.co/CompVis/stable-diffusion-v-1-4-original/resolve/main/sd-v1-4.ckpt
 
+RUN if [ ! -f models/ldm/stable-diffusion-v1/model.ckpt ]; then echo "Fish! Download failed!"; exit 1; fi
+
+# Set the PYTHONPATH to include the ldm folder
+ENV PYTHONPATH="/app/ldm:$PYTHONPATH"
+
 # Default command (can be customized later)
 CMD ["bash"]

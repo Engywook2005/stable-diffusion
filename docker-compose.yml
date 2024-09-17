@@ -5,6 +5,6 @@ services:
     image: local-stable-diffusion  # Custom name for your local image
     volumes:
       - .:/app
-      - ./data:/app/data
+      - ./data:/app/data   
     entrypoint: ["/app/entrypoint.sh"]
     command: python /app/scripts/txt2img.py --prompt "A futuristic cityscape" --outdir /app/data/output
