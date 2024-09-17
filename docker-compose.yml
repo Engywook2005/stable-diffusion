@@ -7,4 +7,4 @@ services:
       - .:/app
       - ./data:/app/data
     entrypoint: ["/app/entrypoint.sh"]
-    command: python /app/scripts/txt2img.py --prompt "A futuristic cityscape" --output_dir /app/data/output
+    command: python /app/scripts/txt2img.py --prompt "A futuristic cityscape" --outdir /app/data/output
